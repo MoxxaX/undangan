@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+ 
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav {
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            height: 100px;
+            width: 100%;
+            display: flex;
+            background-color: greenyellow;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        nav a {
+            font-size: 38pt;
+            text-decoration: none;
+        }
+
+        div.container {
+            min-width: 300px;
+            max-width: 500px;
+            margin: 0px auto;
+        }
+
+        section.page {
+            width: 100%;
+            min-height: 100vh;
+            background-color: salmon;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p, h1{
+            text-align: center;
+        }
+
+        section.page.one {
+            gap: 300pt;
+        }
+
+        section.page.one > div > h1 {
+            font-size: 30pt;
+        }
+
+        section.page.two {
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+        div.card {
+            padding: 10pt;
+            width: 250pt;
+            min-height: 300pt;
+            background-color: gray;
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        div.circle {
+            width: 150pt;
+            height: 150pt;
+            border-radius: 75pt;
+            background-color: greenyellow;
+            margin-bottom: 50px;
+        }
+
+        div.line {
+            width: 150px;
+            height: 1px;
+            background-color: black;
+            margin: 10px auto;
+        }
+
+        .dark-mode #darkModeToggle {
+            background-color: #2d2d2d;
+            color: #fff;
+        }
+
+        .invitation {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .countdown {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        #countdown {
+            font-size: 2em;
+            color: #333;
+        }
+
+        body {
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .dark-mode {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .dark-mode .invitation, .dark-mode h2, .dark-mode #countdown {
+            color: #fff;
+        }
+
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        body.dark-mode .page {
+            background-color: #2d2d2d;
+            color: #fff;
+        }
+
+        body.dark-mode .invitation,
+        body.dark-mode h2,
+        body.dark-mode #countdown {
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="darkModeToggle">🌑 Dark Mode</button>
+
+        <!-- <nav class="mobile">
+            <a href="#home">🏠</a>
+            <a href="#">❤️</a>
+            <a href="#">☎️</a>
+        </nav> -->
+        <section class="page one" id="home">
+            <div class="title">
+                <p>Welcome to my birthday party</p>
+                <h1>Hunico santomo</h1>
+                <p>Jumat, 29 Februari 2024</p>
+            </div>
+
+            <div id="countdown"></div>
+
+            <div class="guest-name">
+                <p>Kepada Yth.</p>
+                <p>Dodi, Ph.D.</p>
+            </div>
+
+            
+
+            <script src="./script.js"></script>
+        </section>
+        <section class="page two">
+            <h2>You're invited to a Birthday Party!</h2>
+            <h1>Date: <span id="eventDate">January 29, 2024</span></h1>
+            <h1>Time: <span id="eventTime">6:00 PM</span></h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae unde eius exercitationem nobis, vitae deleniti dolore ipsum autem minus labore cupiditate quaerat. Officiis, voluptatum repudiandae architecto eligendi et at perferendis.</p>
+            <div class="card">
+                <div class="circle"></div>
+                <h1>Hunico santomo.</h1>
+                <div class="line"></div>
+                <p>Putri Pertama</p>
+                <p>Bapak Santomo</p>
+                <p>&</p>
+                <p>Ibu Shanti</p>
+            </div>
+        </section>
+        <section class="page"></section>
+    </div>
+</body>
+</html>
